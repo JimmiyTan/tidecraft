@@ -1,0 +1,9 @@
+# 视频网关示例配置
+# 第一阶段默认使用 mock provider
+
+video_gateway:
+  enabled: true
+  provider: mock
+  api_key: ""
+  base_url: ""
+  output_dir: ./exports/pending_review

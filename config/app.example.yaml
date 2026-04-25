@@ -1,0 +1,14 @@
+# 应用级示例配置
+# 所有路径均为相对项目根目录的默认值
+
+app:
+  env: dev
+  name: lobster-farm
+  timezone: Asia/Shanghai
+
+paths:
+  workspace_root: ./
+  data_dir: ./data
+  log_dir: ./logs
+  export_dir: ./exports
+  asset_dir: ./assets

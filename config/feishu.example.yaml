@@ -1,0 +1,10 @@
+# 飞书桥接示例配置
+# 第一阶段默认关闭真实发送
+
+feishu:
+  enabled: false
+  app_id: ""
+  app_secret: ""
+  bot_name: lobster-bot
+  default_chat_id: ""
+  dry_run: true

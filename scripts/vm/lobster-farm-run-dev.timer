@@ -1,0 +1,11 @@
+[Unit]
+Description=lobster-farm run-dev timer
+
+[Timer]
+OnCalendar=*-*-* 01:00:00
+AccuracySec=30s
+Unit=lobster-farm-run-dev-once.service
+Persistent=true
+
+[Install]
+WantedBy=timers.target

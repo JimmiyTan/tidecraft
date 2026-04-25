@@ -1,0 +1,7 @@
+# OpenClaw 本地示例配置
+
+runtime:
+  topic_input_file: ./data/input/topic.txt
+  prompt_dir: ./apps/openclaw/prompts
+  session_dir: ./apps/openclaw/runtime/sessions
+  cache_dir: ./apps/openclaw/runtime/cache

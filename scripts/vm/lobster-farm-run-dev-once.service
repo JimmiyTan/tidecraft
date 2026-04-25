@@ -1,0 +1,15 @@
+[Unit]
+Description=lobster-farm single run-dev execution
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=lobster
+WorkingDirectory=/opt/lobster-farm
+ExecStartPre=/bin/bash /opt/lobster-farm/scripts/vm/prepare-systemd-env.sh
+EnvironmentFile=-/opt/lobster-farm/data/runtime/run-dev/systemd.env
+Environment=PYTHONUNBUFFERED=1
+Environment=LOBSTER_FAILURE_ALERT_THRESHOLD=3
+ExecStart=/bin/bash /opt/lobster-farm/scripts/vm/run-dev-managed.sh
+Nice=5

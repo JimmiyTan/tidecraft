@@ -1,0 +1,7 @@
+# Hermes 本地示例配置
+
+runtime:
+  topic_output_count: 5
+  skill_dir: ./workers/hermes/skills
+  job_dir: ./workers/hermes/runtime/jobs
+  cache_dir: ./workers/hermes/runtime/cache

@@ -1,0 +1,9 @@
+# Hermes worker 示例配置
+
+hermes:
+  enabled: true
+  worker_name: hermes
+  skill_dir: ./workers/hermes/skills
+  local_config: ./workers/hermes/config/hermes.local.example.yaml
+  job_dir: ./workers/hermes/runtime/jobs
+  cache_dir: ./workers/hermes/runtime/cache

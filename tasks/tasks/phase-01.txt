@@ -1,0 +1,53 @@
+你现在开始实现 lobster-farm 项目的第一阶段。
+
+先读 AGENTS.md。
+严格遵守其中的安全边界和工作方式。
+
+阶段目标：
+在当前项目目录中创建一个可重建、可验证的最小可行骨架，实现以下内容：
+1. 项目目录结构
+2. README.md
+3. .env.example
+4. .gitignore
+5. .codex/config.toml
+6. docs/install.md
+7. docs/architecture.md
+8. docs/verification.md
+9. config/*.example.yaml
+10. apps/openclaw 目录骨架
+11. workers/hermes 目录骨架
+12. services/feishu-bridge 最小可运行骨架
+13. services/video-gateway 最小可运行骨架
+14. services/orchestrator 最小可运行骨架
+15. scripts/bootstrap.ps1 与 scripts/bootstrap.sh
+16. scripts/run-dev.ps1 与 scripts/run-dev.sh
+17. scripts/verify.ps1 与 scripts/verify.sh
+18. tests/smoke 下的最小验证脚本
+
+实现要求：
+1. 所有代码和文档使用中文注释或中文说明
+2. 所有模块优先实现占位版，不依赖真实密钥
+3. 飞书桥接模块先实现消息格式化和发送占位，不强制接真实飞书
+4. 视频网关先实现 mock provider，输入主题后生成伪造结果文件到 exports/pending_review
+5. orchestrator 先实现以下流程：
+   - 接收主题输入
+   - 生成 5 条选题占位结果
+   - 生成对应脚本占位结果
+   - 调用飞书桥接模块格式化消息
+   - 调用视频网关输出待审核文件
+   - 将状态写入 data/state
+6. 所有路径仅允许使用当前项目目录内的相对路径
+7. 不要联网安装依赖
+8. 不要修改系统设置
+9. 不要生成与本阶段无关的复杂逻辑
+10. 优先保证结构清晰和可验证
+
+输出要求：
+1. 先输出实施计划
+2. 再开始创建文件
+3. 结束后输出：
+   - 新建了哪些文件
+   - 每个文件的作用
+   - 如何运行
+   - 如何验证
+   - 下一阶段建议

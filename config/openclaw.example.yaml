@@ -1,0 +1,9 @@
+# OpenClaw 主控示例配置
+
+openclaw:
+  enabled: true
+  app_name: lobster-farm
+  prompt_dir: ./apps/openclaw/prompts
+  local_config: ./apps/openclaw/config/openclaw.local.example.yaml
+  session_dir: ./apps/openclaw/runtime/sessions
+  cache_dir: ./apps/openclaw/runtime/cache
