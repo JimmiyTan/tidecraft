@@ -230,4 +230,4 @@ python .\services\orchestrator\src\publish.py --task-id "task_xxx" --platform do
 - [架构说明](docs/architecture.md)
 - [运行与排错](docs/runbook.md)
 
-当前项目发布在 GitHub 私有仓库中，尚未配置开源许可证。未来如需公开，应先由项目负责人决定许可证并重新执行隐私复核。
+当前项目已发布在 GitHub 公开仓库中，但尚未配置开源许可证，因此未授予明确的开源使用许可。项目负责人已在公开前重新执行隐私复核。
