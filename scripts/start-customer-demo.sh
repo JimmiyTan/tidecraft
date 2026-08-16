@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# phase-07 最终版开发运行脚本
-# 作用：运行最小闭环编排链路，生成消息预览、状态文件和待审核结果。
+# phase-07 客户前端演示启动脚本
+# 作用：仅在 127.0.0.1 启动本地客户演示页面。
 
 set -euo pipefail
 
@@ -13,8 +13,8 @@ elif command -v python3 >/dev/null 2>&1; then
 elif command -v python >/dev/null 2>&1; then
   PYTHON_BIN="python"
 else
-  echo "未找到 Python。请先参考 docs/install.md 手动准备 Python 环境。" >&2
+  echo "未找到 Python。请先参考 docs/install.md 准备 Python 环境。" >&2
   exit 1
 fi
 
-"$PYTHON_BIN" ./services/orchestrator/src/main.py --topic "lobster-farm phase-07 final demo topic"
+"$PYTHON_BIN" ./services/orchestrator/src/customer_demo_server.py --open "$@"

@@ -2,7 +2,7 @@
 
 ## 当前阶段能力
 
-phase-04 支持通过 `VIDEO_PROVIDER=api` 调用真实视频 API provider，但仍不接入任何短视频平台自动发布能力。
+phase-07 最终版本支持通过 `VIDEO_PROVIDER=api` 调用真实视频 API provider，并将结果交给人工审核与发布准备流程；仍不接入任何短视频平台自动发布能力。
 
 默认安全模式仍可使用：
 

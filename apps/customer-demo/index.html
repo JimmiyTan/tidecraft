@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="lobster-farm 本地安全短视频内容运营闭环客户演示"
+    >
+    <title>lobster-farm｜客户功能演示</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="lobster-farm 首页">
+        <span class="brand-mark" aria-hidden="true">LF</span>
+        <span class="brand-copy">
+          <strong>lobster-farm</strong>
+          <small>AI 内容运营中台</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="页面导航">
+        <a href="#workflow">功能链路</a>
+        <a href="#capabilities">核心能力</a>
+        <a href="#safety">安全边界</a>
+      </nav>
+      <div class="service-chip" id="serviceStatus" aria-live="polite">
+        <span class="status-dot"></span>
+        <span>正在连接本地演示</span>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> PHASE 07 · CUSTOMER DEMO</p>
+          <h1>把一个主题，变成<br><em>可审核、可交付</em>的内容闭环</h1>
+          <p class="hero-lead">
+            从短视频选题、脚本和审核，到双平台发布准备与人工回执，
+            每一步都有状态、有记录，也始终保留人的最终决定权。
+          </p>
+          <div class="hero-trust" aria-label="产品特性">
+            <span>本地运行</span>
+            <span>人工审核</span>
+            <span>全程可追踪</span>
+          </div>
+        </div>
+
+        <form class="demo-console" id="demoForm">
+          <div class="console-heading">
+            <div>
+              <p class="console-kicker">LIVE WORKFLOW</p>
+              <h2>现场生成一条内容任务</h2>
+            </div>
+            <span class="mode-pill">安全演示模式</span>
+          </div>
+
+          <label for="topicInput">客户演示主题</label>
+          <div class="input-wrap">
+            <span aria-hidden="true">01</span>
+            <input
+              id="topicInput"
+              name="topic"
+              type="text"
+              minlength="2"
+              maxlength="120"
+              value="本地餐饮门店如何用 AI 做短视频"
+              required
+            >
+          </div>
+
+          <label for="operatorInput">演示操作人</label>
+          <div class="input-wrap compact">
+            <span aria-hidden="true">02</span>
+            <input
+              id="operatorInput"
+              name="operator"
+              type="text"
+              maxlength="40"
+              value="客户演示"
+            >
+          </div>
+
+          <button class="primary-button" id="runButton" type="submit">
+            <span id="buttonText">开始客户演示</span>
+            <span class="button-arrow" aria-hidden="true">→</span>
+          </button>
+          <p class="console-note">
+            <span aria-hidden="true">●</span>
+            仅生成本地模拟数据，不发送真实消息或内容
+          </p>
+          <div class="error-banner" id="errorBanner" role="alert" hidden></div>
+        </form>
+      </section>
+
+      <section class="metrics section-shell" aria-label="关键指标">
+        <article>
+          <strong>5</strong>
+          <span>候选内容方向</span>
+        </article>
+        <article>
+          <strong>2</strong>
+          <span>平台发布准备包</span>
+        </article>
+        <article>
+          <strong>100%</strong>
+          <span>保留人工审核</span>
+        </article>
+        <article>
+          <strong>0</strong>
+          <span>自动正式发布</span>
+        </article>
+      </section>
+
+      <section class="workflow-section section-shell" id="workflow">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> END-TO-END WORKFLOW</p>
+            <h2>一条可现场讲解的完整业务链路</h2>
+          </div>
+          <p>点击演示后，页面将使用项目现有能力运行一次真实的本地模拟闭环。</p>
+        </div>
+
+        <ol class="flow-track" id="flowTrack">
+          <li class="flow-step" data-stage="1">
+            <span class="step-index">01</span>
+            <div><strong>内容生成</strong><small>选题与脚本</small></div>
+            <span class="step-state">等待</span>
+          </li>
+          <li class="flow-step" data-stage="2">
+            <span class="step-index">02</span>
+            <div><strong>人工审核</strong><small>状态与备注</small></div>
+            <span class="step-state">等待</span>
+          </li>
+          <li class="flow-step" data-stage="3">
+            <span class="step-index">03</span>
+            <div><strong>发布准备</strong><small>双平台素材包</small></div>
+            <span class="step-state">等待</span>
+          </li>
+          <li class="flow-step" data-stage="4">
+            <span class="step-index">04</span>
+            <div><strong>人工回执</strong><small>结果与链接</small></div>
+            <span class="step-state">等待</span>
+          </li>
+          <li class="flow-step" data-stage="5">
+            <span class="step-index">05</span>
+            <div><strong>任务归档</strong><small>全流程留痕</small></div>
+            <span class="step-state">等待</span>
+          </li>
+        </ol>
+
+        <div class="result-empty" id="resultEmpty">
+          <span class="empty-orbit" aria-hidden="true"><b>LF</b></span>
+          <div>
+            <h3>演示结果将在这里展开</h3>
+            <p>填写上方主题并点击“开始客户演示”，约数秒即可完成。</p>
+          </div>
+        </div>
+
+        <div class="result-panel" id="resultPanel" hidden aria-live="polite">
+          <div class="result-header">
+            <div>
+              <p class="result-label">DEMO COMPLETED</p>
+              <h3 id="resultTopic">演示任务已完成</h3>
+              <p>任务编号 <code id="taskId">—</code></p>
+            </div>
+            <span class="success-badge">闭环已归档</span>
+          </div>
+
+          <div class="result-status-grid">
+            <article><span>工作流</span><strong id="workflowStatus">—</strong></article>
+            <article><span>人工审核</span><strong id="reviewStatus">—</strong></article>
+            <article><span>发布回执</span><strong id="publishStatus">—</strong></article>
+            <article><span>完成时间</span><strong id="completedAt">—</strong></article>
+          </div>
+
+          <div class="result-columns">
+            <article class="result-card">
+              <div class="card-heading">
+                <span>01</span>
+                <h4>生成的候选选题</h4>
+              </div>
+              <ol class="candidate-list" id="candidateList"></ol>
+            </article>
+
+            <article class="result-card">
+              <div class="card-heading">
+                <span>02</span>
+                <h4>双平台交付状态</h4>
+              </div>
+              <div class="platform-grid" id="platformGrid"></div>
+              <div class="safety-confirmation">
+                <span aria-hidden="true">✓</span>
+                <p><strong>安全边界已确认</strong><br>未调用任何真实发布接口</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="capabilities section-shell" id="capabilities">
+        <div class="section-heading compact-heading">
+          <div>
+            <p class="eyebrow"><span></span> CORE CAPABILITIES</p>
+            <h2>为内容团队保留效率，也保留控制</h2>
+          </div>
+        </div>
+        <div class="capability-grid">
+          <article>
+            <span class="capability-number">01</span>
+            <h3>内容快速成型</h3>
+            <p>一个主题自动拆解为多个选题方向和脚本草案，减少重复准备工作。</p>
+          </article>
+          <article>
+            <span class="capability-number">02</span>
+            <h3>审核过程可追踪</h3>
+            <p>审核状态、操作人、备注和时间统一落盘，重要决定有据可查。</p>
+          </article>
+          <article>
+            <span class="capability-number">03</span>
+            <h3>双平台统一交付</h3>
+            <p>同步整理抖音与视频号所需标题、文案、标签和发布检查清单。</p>
+          </article>
+          <article>
+            <span class="capability-number">04</span>
+            <h3>发布结果形成闭环</h3>
+            <p>人工发布完成后回写结果与链接，让内容生产和运营结果真正连通。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="safety-section section-shell" id="safety">
+        <div class="safety-copy">
+          <p class="eyebrow light"><span></span> SAFETY BY DEFAULT</p>
+          <h2>演示可以自动，最终决定必须在人</h2>
+          <p>
+            客户演示固定运行在本地安全模式。系统不会登录短视频平台，
+            不会读取浏览器个人数据，也不会自动正式发布任何内容。
+          </p>
+        </div>
+        <ul class="safety-list">
+          <li><span>01</span><strong>本地运行</strong><small>只监听 127.0.0.1</small></li>
+          <li><span>02</span><strong>模拟外部服务</strong><small>dry-run / mock</small></li>
+          <li><span>03</span><strong>人工确认</strong><small>审核与发布均保留人工环节</small></li>
+          <li><span>04</span><strong>全程留痕</strong><small>任务、状态和回执可审计</small></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <div class="brand footer-brand">
+        <span class="brand-mark" aria-hidden="true">LF</span>
+        <span class="brand-copy"><strong>lobster-farm</strong><small>Phase 07 Final Demo</small></span>
+      </div>
+      <p>本页面仅用于本地客户演示，不代表已启用真实平台发布能力。</p>
+    </footer>
+
+    <div class="sr-only" id="liveRegion" aria-live="assertive"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

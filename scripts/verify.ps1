@@ -1,5 +1,5 @@
-# phase-04 verify script
-# Purpose: check Python, workflow, content pipeline, provider files, and tests.
+# phase-07 final verification script
+# Purpose: check Python, workflow, content pipeline, provider, review, publishing, exports, and tests.
 
 $pythonCommand = Get-Command ".\.venv\Scripts\python.exe" -ErrorAction SilentlyContinue
 if (-not $pythonCommand) {
@@ -84,7 +84,7 @@ foreach ($dir in $requiredDirs) {
   }
 }
 
-Invoke-VerifyStep "orchestrator minimal workflow" @(".\services\orchestrator\src\main.py", "--topic", "phase-04 verify topic")
+Invoke-VerifyStep "orchestrator minimal workflow" @(".\services\orchestrator\src\main.py", "--topic", "phase-07 final verify topic")
 
 if (-not (Test-Path -LiteralPath ".\data\state\workflow_state.json")) {
   Write-Error "data/state/workflow_state.json was not generated."
@@ -123,5 +123,10 @@ Invoke-VerifyStep "unittest feishu real adapter" @("-m", "unittest", ".\services
 Invoke-VerifyStep "unittest video mock provider" @("-m", "unittest", ".\services\video-gateway\tests\test_mock_provider.py")
 Invoke-VerifyStep "unittest video api provider" @("-m", "unittest", ".\services\video-gateway\tests\test_api_provider.py")
 Invoke-VerifyStep "unittest orchestrator workflow" @("-m", "unittest", ".\services\orchestrator\tests\test_workflow.py")
+Invoke-VerifyStep "unittest review workflow" @("-m", "unittest", ".\services\orchestrator\tests\test_review_workflow.py")
+Invoke-VerifyStep "unittest publishing workflow" @("-m", "unittest", ".\services\orchestrator\tests\test_publishing_workflow.py")
+Invoke-VerifyStep "unittest safe demo" @("-m", "unittest", ".\services\orchestrator\tests\test_demo.py")
+Invoke-VerifyStep "unittest customer demo web" @("-m", "unittest", ".\services\orchestrator\tests\test_customer_demo_web.py")
+Invoke-VerifyStep "privacy audit" @(".\scripts\privacy-audit.py")
 
-Write-Output "verify completed: content pipeline, workflow, provider tests, task exports, and tests passed."
+Write-Output "verify completed: content pipeline, workflow, provider, review, publishing, demo, customer web, privacy audit, task exports, and tests passed."

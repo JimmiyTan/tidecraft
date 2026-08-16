@@ -112,6 +112,44 @@ python .\services\orchestrator\src\review.py --task-id "task_xxx" --review-statu
 - `exports/pending_review/<task_id>/review_decision.json`
 - `exports/pending_review/<task_id>/review_note.txt`
 
+## 人工发布回执
+
+查看待发布任务：
+
+```powershell
+python .\services\orchestrator\src\publish.py --list --status ready_to_publish
+```
+
+写回抖音人工发布结果：
+
+```powershell
+python .\services\orchestrator\src\publish.py --task-id "task_xxx" --platform douyin --publish-status manually_published --publish-url "链接" --published-by "alice" --publish-note "已发布"
+```
+
+写回视频号人工发布结果：
+
+```powershell
+python .\services\orchestrator\src\publish.py --task-id "task_xxx" --platform wechat_channels --publish-status manually_published --publish-url "链接" --published-by "alice" --publish-note "已同步"
+```
+
+查询单个任务发布状态：
+
+```powershell
+python .\services\orchestrator\src\publish.py --task-id "task_xxx"
+```
+
+归档任务：
+
+```powershell
+python .\services\orchestrator\src\publish.py --task-id "task_xxx" --archive
+```
+
+发布回执会写入：
+
+- `exports/pending_review/<task_id>/publish_result.json`
+- `exports/pending_review/<task_id>/publish_note.txt`
+- `data/state/publish_queue.json`
+
 ## 失败排查
 
 - 配置错误：查看 `.env` 和 `docs/configuration.md`

@@ -1,4 +1,4 @@
-# phase-01.5 dev runner
+# phase-07 final local runner
 # Purpose: run the minimal workflow and generate review outputs.
 
 $pythonCommand = Get-Command ".\.venv\Scripts\python.exe" -ErrorAction SilentlyContinue
@@ -13,4 +13,4 @@ if (-not $pythonCommand) {
   exit 1
 }
 
-& $pythonCommand.Source .\services\orchestrator\src\main.py --topic "lobster-farm phase-04 demo topic"
+& $pythonCommand.Source .\services\orchestrator\src\main.py --topic "lobster-farm phase-07 final demo topic"

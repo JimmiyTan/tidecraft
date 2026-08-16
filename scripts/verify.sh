@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# phase-04 verify script
-# Purpose: check Python, safe default mode, task directory exports, and tests.
+# phase-07 final verification script
+# Purpose: check Python, workflow, provider, review, publishing, exports, and tests.
 
 set -euo pipefail
 
@@ -75,7 +75,7 @@ for dir in "${required_dirs[@]}"; do
   fi
 done
 
-"$PYTHON_BIN" ./services/orchestrator/src/main.py --topic "phase-04 verify topic"
+"$PYTHON_BIN" ./services/orchestrator/src/main.py --topic "phase-07 final verify topic"
 
 if [[ ! -f ./data/state/workflow_state.json ]]; then
   echo "data/state/workflow_state.json was not generated." >&2
@@ -99,5 +99,10 @@ fi
 "$PYTHON_BIN" -m unittest ./services/video-gateway/tests/test_mock_provider.py
 "$PYTHON_BIN" -m unittest ./services/video-gateway/tests/test_api_provider.py
 "$PYTHON_BIN" -m unittest ./services/orchestrator/tests/test_workflow.py
+"$PYTHON_BIN" -m unittest ./services/orchestrator/tests/test_review_workflow.py
+"$PYTHON_BIN" -m unittest ./services/orchestrator/tests/test_publishing_workflow.py
+"$PYTHON_BIN" -m unittest ./services/orchestrator/tests/test_demo.py
+"$PYTHON_BIN" -m unittest ./services/orchestrator/tests/test_customer_demo_web.py
+"$PYTHON_BIN" ./scripts/privacy-audit.py
 
-echo "verify completed: phase-04 workflow, video provider tests, task exports, and tests passed."
+echo "verify completed: workflow, provider, review, publishing, demo, customer web, privacy audit, task exports, and tests passed."
