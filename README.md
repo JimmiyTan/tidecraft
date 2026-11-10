@@ -10,6 +10,10 @@
 
 ## 前端功能展示
 
+- [单页作品集说明](apps/portfolio/README.md)：下载仓库后打开 `apps/portfolio/index.html` 查看。
+- [完整项目作品集 PDF](output/pdf/Jerry_Tan_TideCraft_Portfolio.pdf)：9 页项目介绍、架构与交付说明。
+- [作品集生成说明](portfolio/README.md)：配图、生成源文件和依赖说明。
+
 ![潮生内容工场客户演示——候选选题、人工审核与双平台交付结果](assets/screenshots/customer-demo-workflow.jpg)
 
 上图为本地客户演示完成后的功能结果页，展示候选选题、人工审核状态、抖音与视频号发布准备以及安全边界。截图使用模拟主题和 dry-run/mock 数据，不包含真实客户资料或平台账号信息。

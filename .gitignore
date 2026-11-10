@@ -45,3 +45,7 @@ credentials/
 cookies*.json
 storage-state*.json
 storage_state*.json
+
+# 本地作品集预览和内部对照文件不上传。
+/tmp/
+/portfolio/assets/customer-demo-workflow.jpg
